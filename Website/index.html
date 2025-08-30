@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html href="top">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="assets/beeLogo" type="image/png" />
+  <title>Bee a Hero</title>
+
+  <!-- Link Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,600;1,600&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Link Nav Bar Menu Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Link Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="top">
+    <!-- Nav Bar -->
+    <div class="navBar" id="globalNavBar">
+      <a class="beeLogo" href="index.html"><img draggable="false" src="assets/beeLogo.png" alt="Bee logo."></a>
+      <a class="hoverUnderlineAnimation navBarText" href="#funFacts">Key Facts</a>
+      <a class="hoverUnderlineAnimation navBarText" href="#solutions">Solutions</a>
+      <a class="hoverUnderlineAnimation navBarText" href="#game">Game</a>
+      <a class="hoverUnderlineAnimation navBarText" href="#buttons">Bee-sources</a>
+      <a href="javascript:void(0);" class="icon" onclick="adjustNavBar()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1 id="title">Bee a Hero</h1>
+    <p id="subtitle">Save the Hive, Save the World!</p>
+
+    <br>
+    <br>
+
+    <!-- Dropdowns -->
+    <div id="funFacts">
+      <div class="collapsibles">
+        <button type="button" class="collapsible">Habitat Loss & Climate Change</button>
+        <div class="collapsibleContent">
+          <p>❃ &emsp; Over 25% of bee species are endangered. Wild bees, like bumblebees and solitary bees, lack the
+            protections often given to honeybees.</p>
+          <br>
+          <p>❃ &emsp; Urban development, monoculture farming, and deforestation reduce the habitats bees need to
+            survive.</p>
+          <br>
+          <p>❃ &emsp; Climate change alters blooming patterns, leading to food shortages during key foraging times.</p>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="collapsibles">
+        <button type="button" class="collapsible">Pesticides & Genetic Diversity</button>
+        <div class="collapsibleContent">
+          <p>❃ &emsp; Neonicotinoids are a class of insecticides that target insects' nervous systems and are linked to
+            pollinator declines.</p>
+          <br>
+          <p>❃ &emsp; Neonicotinoids and other pesticides weaken bees' immune systems, disrupt navigation, and lower
+            reproduction.</p>
+          <br>
+          <p>❃ &emsp; Population declines reduce genetic diversity, making bees more vulnerable to environmental stress
+            and disease.</p>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="collapsibles">
+        <button type="button" class="collapsible">Wild Bee Vulnerability & Diseases</button>
+        <div class="collapsibleContent">
+          <p>❃ &emsp; Wild bees are more vulnerable due to the lack of management and treatment they receive compared to
+            honey bees.</p>
+          <br>
+          <p>❃ &emsp; Monocultures offer limited and short-lived food sources, contributing to poor bee nutrition.</p>
+          <br>
+          <p>❃ &emsp; Varroa mites and Nosema infections spread rapidly, especially where wild and managed bees overlap.
+          </p>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="collapsibles">
+        <button type="button" class="collapsible">Pollination Impact & At-Risk Species</button>
+        <div class="collapsibleContent">
+          <p>❃ &emsp; Bees pollinate over 75% of food crops, making them vital for agriculture and global food security.
+          </p>
+          <br>
+          <p>❃ &emsp; Species in danger include: Rusty Patched Bumble Bee (USA), Franklin’s Bumble Bee (USA), Patagonian
+            Bumble Bee (South America), and Yellow-Banded Bumble Bee (Canada/US).</p>
+          <br>
+          <p>❃ &emsp; Light pollution interferes with the nocturnal activities of some bee species, disrupting their
+            foraging patterns and reducing pollination efficiency.</p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Solutions Section -->
+    <div id="solutions">
+      <div class="threeSideBySide">
+        <!-- Card 1 -->
+        <div class="threeSideBySideElement">
+          <div class="flipCard">
+            <div class="flipCardInner">
+              <div class="flipCardFront">
+                <img src="assets/bee1.jpg" alt="Bee on yellow flower.">
+              </div>
+              <div class="flipCardBack">
+                <br><br><br><br>
+                <h1>Restore Native Habitats</h1>
+                <p>Plant native wildflowers and restore habitats in cities, farms, and forests.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="threeSideBySideElement">
+          <div class="flipCard">
+            <div class="flipCardInner">
+              <div class="flipCardFront">
+                <img src="assets/bee2.jpg" alt="Bee flying with green background.">
+              </div>
+              <div class="flipCardBack">
+                <br><br><br><br>
+                <h1>Conserve Wild Bee Populations</h1>
+                <p>Promote protection and monitoring of wild bee species with dedicated conservation programs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="threeSideBySideElement">
+          <div class="flipCard">
+            <div class="flipCardInner">
+              <div class="flipCardFront">
+                <img src="assets/bee3.jpg" alt="Bee flying in front of yellow flower.">
+              </div>
+              <div class="flipCardBack">
+                <br><br><br><br>
+                <h1>Pesticide Control</h1>
+                <p>Reduce pesticide use and advocate for bans on harmful chemicals like neonicotinoids.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="threeSideBySide">
+        <!-- Card 4 -->
+        <div class="flipCard">
+          <div class="flipCardInner">
+            <div class="flipCardFront">
+              <img src="assets/bee4.jpg" alt="Bee sitting on yellow flower.">
+            </div>
+            <div class="flipCardBack">
+              <br><br><br><br>
+              <h1>Genetically Diverse Populations</h1>
+              <p>Encourage conservation breeding to maintain healthy and genetically diverse bee populations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="threeSideBySideElement">
+          <div class="flipCard">
+            <div class="flipCardInner">
+              <div class="flipCardFront">
+                <img src="assets/bee5.jpg" alt="Fuzzy bee on yellow flower.">
+              </div>
+              <div class="flipCardBack">
+                <br><br><br><br>
+                <h1>Planned Agriculture</h1>
+                <p>Support diverse planting and staggered blooming schedules to improve bee nutrition year-round.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="threeSideBySideElement">
+          <div class="flipCard">
+            <div class="flipCardInner">
+              <div class="flipCardFront">
+                <img src="assets/bee6.jpg" alt="Close up of bee on yellow flower.">
+              </div>
+              <div class="flipCardBack">
+                <br><br><br><br>
+                <h1>Disease Control</h1>
+                <p>Implement better health management for bee populations to control diseases and parasites.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Bee Garden Game Section -->
+    <div id="game">
+      <section id="bee-garden-game" style="position: relative;">
+
+        <!-- 🐝 Game Start Overlay -->
+        <div id="game-start-overlay" style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        z-index: 10;
+        transition: opacity 0.5s ease;
+        opacity: 1;
+      ">
+          <div id="game-start-content"
+            style="background: white; padding: 30px; border-radius: 20px; max-width: 500px; width: 90%; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+            <h2>🐝 Welcome to Bloom and Buzz!</h2>
+            <p>🌱 Drag seeds and pots into your garden to plant flowers.</p>
+            <p>🐝 Harvest flowers after each day to earn bees and money.</p>
+            <p>🎯 Match two same flowers for bonus money.</p>
+            <p>🏆 Play through 10 days to achieve your highest score.</p>
+            <button id="game-start-button"
+              style="margin-top: 20px; padding: 15px 30px; font-size: 20px; background: #ffca28; border: none; border-radius: 15px; cursor: pointer;">Start</button>
+          </div>
+        </div>
+
+        <!-- End Day Bonus Overlay -->
+        <div id="end-day-bonus-overlay" style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        z-index: 20;
+      ">
+          <div
+            style="background: white; padding: 30px; border-radius: 15px; text-align: center; max-width: 400px; width: 90%; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+            <h2>End of Day Bonus!</h2>
+            <p id="bonus-message" style="margin-bottom: 20px;"></p>
+            <button id="bonus-continue-button"
+              style="padding: 10px 20px; font-size: 18px; background: #7bd67b; border: none; border-radius: 10px; cursor: pointer;">Continue</button>
+          </div>
+        </div>
+
+        <!-- Garden Header -->
+        <div class="garden-header">
+          <h2>🐝 Bloom and Buzz</h2>
+          <div id="garden-stats">
+            <span id="money">Money: $100</span> |
+            <span id="day">Day: 1/10</span>
+          </div>
+        </div>
+
+
+        <!-- Garden Layout -->
+        <div class="garden-layout">
+          <section id="shop" class="garden-panel">
+            <h3>Seeds</h3>
+            <div id="shop-items"></div>
+            <h3>Pot</h3>
+            <div id="shop-pot"></div>
+          </section>
+
+          <section id="garden" class="garden-panel">
+            <h3>Your Garden</h3>
+            <div id="garden-area">
+              <div id="plant-display">
+                <!-- Correct multiple pots initially shown -->
+                <img name="pot1" class="plant-img" src="../Game/sprites/LiterallyJustAPot.png" alt="Plant Pot"
+                  style="width: 100px; height: auto; image-rendering: pixelated;">
+                <img name="pot2" class="plant-img" src="../Game/sprites/GreyPot.png" alt="Locked Pot"
+                  style="width: 100px; height: auto; image-rendering: pixelated;">
+                <img name="pot3" class="plant-img" src="../Game/sprites/GreyPot.png" alt="Locked Pot"
+                  style="width: 100px; height: auto; image-rendering: pixelated;">
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="garden-footer">
+          <button id="end-day-button">End Day</button>
+        </div>
+
+      </section>
+
+      <!-- Scoreboard for Game End -->
+      <div id="scoreboard" style="display: none;">
+        <h2>Game Over!</h2>
+        <p id="score-money"></p>
+        <p id="score-bees"></p>
+        <p id="score-flowers"></p>
+        <p id="score-stars"></p>
+        <p id="score-best"></p>
+        <button id="restart-button">Restart Game</button>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Bee Resources Section -->
+    <div class="buttons" id="buttons">
+      <p id="subtitle">Bee-sources</p>
+      <br>
+      <a href="https://thebeeconservancy.org" target="_blank"><button class="resourceButton">The Bee
+          Conservancy</button></a>
+      <a href="https://savethebeesusa.org" target="_blank"><button class="resourceButton">Save the Bees USA</button></a>
+      <a href="https://www.operationhoneybee.com" target="_blank"><button class="resourceButton">Operation Honey
+          Bee</button></a>
+      <a href="https://www.greenpeace.org/usa/save-the-bees/" target="_blank"><button
+          class="resourceButton">Greenpeace</button></a>
+    </div>
+
+    <br>
+
+  </div>
+
+  <script src="../Game/bee-game.js"></script>
+  <script src="confetti.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

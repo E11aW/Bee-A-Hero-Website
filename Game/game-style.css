@@ -1,0 +1,287 @@
+/* General styles */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Game Container */
+#bee-garden-game {
+  position: relative;
+  background: #f7fef7;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 20px;
+  max-width: 800px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Garden Area must be relative to hold background bees correctly */
+#garden-area {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust height if needed */
+  overflow: hidden;
+  background-color: #e0f7e0;
+  border-radius: 10px;
+}
+
+/* Start Overlay Fade Out Animation */
+@keyframes startFadeOut {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.95); }
+}
+
+.start-fade-out {
+  animation: startFadeOut 0.5s ease forwards;
+}
+
+/* Bonus Bounce In Animation */
+@keyframes bonusBounceIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  60% { opacity: 1; transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.bonus-bounce-in {
+  animation: bonusBounceIn 0.6s ease forwards;
+}
+
+/* Garden Header */
+.garden-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Garden Layout */
+.garden-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.garden-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: 360px;
+}
+
+/* Shop Items */
+#shop-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+#plant-display img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Garden Footer */
+.garden-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#end-day-button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background: #7bd67b;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#end-day-button:hover {
+  background: #5cb85c;
+}
+
+/* Scoreboard */
+#scoreboard {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  text-align: center;
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#scoreboard.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Seed Packet Styles */
+.seed-affordable {
+  box-shadow: 0 0 10px 2px #9cff9c;
+  transition: box-shadow 0.3s ease;
+}
+
+.seed-unaffordable {
+  opacity: 0.4;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+/* Glow Animation when Seeds become affordable */
+@keyframes seedGlow {
+  0% { box-shadow: 0 0 10px 5px #aaffaa; transform: scale(1.1); }
+  100% { box-shadow: none; transform: scale(1); }
+}
+
+.seed-glow {
+  animation: seedGlow 0.6s ease;
+}
+
+/* Pot Highlight when affordable */
+.pot-affordable {
+  animation: pulse 1s infinite alternate;
+}
+
+/* Pot Styles */
+.pot-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.pot-label {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 5px 2px #66cc66; }
+  100% { transform: scale(1.05); box-shadow: 0 0 10px 4px #66cc66; }
+}
+
+/* Flower States */
+.growing {
+  opacity: 0.6;
+  filter: grayscale(50%);
+}
+
+.harvestable {
+  opacity: 1;
+  filter: none;
+  cursor: pointer;
+}
+
+/* Harvest Combo Sparkle */
+@keyframes sparkle {
+  0% { box-shadow: 0 0 5px 3px gold; }
+  100% { box-shadow: 0 0 15px 6px gold; }
+}
+
+.sparkle {
+  animation: sparkle 1s infinite alternate;
+}
+
+/* Harvest Flower Fade Out Animation */
+@keyframes harvestFadeOut {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.7); }
+}
+
+.harvest-fade-out {
+  animation: harvestFadeOut 0.4s ease forwards;
+}
+
+/* Planting Animation */
+@keyframes plantGrow {
+  0% { transform: scale(0.7); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.plant-grow {
+  animation: plantGrow 0.4s ease;
+}
+
+/* Bee Spawn Animation */
+.bee-sprite {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  animation: flyBee 2s ease-in forwards;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes flyBee {
+  0% { opacity: 0; transform: translateY(0) translateX(-50%); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-120px) translateX(-50%) rotate(360deg); }
+}
+
+/* Background Bee Animation */
+#garden-area {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-color: #d9fdd9;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Background Bee Style */
+.background-bee {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  animation: beeFloatRandom 6s linear forwards;
+}
+
+/* Bee Floating and Fading */
+@keyframes beeFloatRandom {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 0px) scale(0.9);
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(50px, -30px) scale(1.1);
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(100px, 40px) scale(1);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,573 @@
+html {
+  height: 100%;
+  width: 100%;
+  background: #FFDC74;
+  font-family: "Cal Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+* {
+  margin: 0px;
+}
+
+.content {
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 90%;
+}
+
+/*Style Nav Bar*/
+/*Style All Elements With the Class navBar*/
+.navBar {
+  /*position: fixed;*/
+  overflow: hidden;
+  background-color: #0D121E;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/*Style Nav Bar Links*/
+.navBar a {
+  float: left;
+  display: block;
+  color: #FFDC74;
+  background-color: #0D121E;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 500;
+}
+
+/*Style Nav Bar Links on Hover*/
+.navBar .navBarText:hover {
+  background-color: #0D121E;
+  color: #FFDC74;
+}
+
+/*Style Active Nav Bar Links*/
+.navBar a.active {
+  background-color: #FFDC74;
+  color: #0D121E;
+}
+
+/*Style Nav Bar Icon*/
+.navBar .icon {
+  display: none;
+  background-color: #FFDC74;
+  color: #0D121E;
+}
+
+/*Style Nav Bar Image*/
+.navBar img {
+  background-color: #0D121E;
+  height: 40px;
+  width: auto;
+  display: block;
+  padding: 3px 15px;
+  margin: -14px -16px;
+}
+
+.navBar img:hover {
+  background-color: #0D121E;
+}
+
+.navBar img.active {
+  background-color: #0D121E;
+}
+
+/*COLLAPSIBLES*/
+.collapsibles {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Style Collapsible Button*/
+.collapsible {
+  background-color: #0D121E;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  border-radius: 10px;
+  font-family: AzoSans;
+}
+
+.collapsible,
+button {
+  font-style: normal;
+  font-family: "Cal Sans", sans-serif;
+}
+
+.active,
+.collapsible button {
+  border-radius: 10px 10px 0px 0px;
+}
+
+/*Style Collapsible Button On Click and On Hover*/
+.active,
+.collapsible:hover {
+  background-color: #0D121E;
+}
+
+/*Style Collapsible "Open Button" When Collapsible is Closed*/
+.collapsible:after {
+  content: '+';
+  font-size: 20px;
+  font-weight: bold;
+  color: #F5D68B;
+  float: right;
+  margin-left: 5px;
+}
+
+/*Style Collapsible "Close Button" When Collapsible is Open*/
+.active:after {
+  content: '-';
+  font-size: 20px;
+  font-weight: bold;
+  color: #F5D68B;
+}
+
+/*Hide Content Within Collapsible*/
+.collapsibleContent {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  color: #0D121E;
+  border-radius: 0px 0px 10px 10px;
+}
+
+/*Style Collapsible Paragraph Text*/
+.collapsibleContent,
+p {
+  font-weight: 600;
+}
+
+.collapsibleIcon {
+  height: 250px;
+  width: auto;
+}
+
+/*Style Flip Cards*/
+.flipCard {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 3em;
+}
+
+/*Style Flip Card Inner (Position Front and Back Sides)*/
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/*Style Flip Card on Hover*/
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+/*Style Front and Back of Flip Card*/
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+}
+
+.flipCardFront img {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/*Style Back of Flip Card*/
+.flipCardBack {
+  background-color: #0D121E;
+  color: #FFFFFF;
+  transform: rotateY(180deg);
+  padding: 1em;
+}
+
+.flipCardBack h1 {
+  color: #FFDC74;
+}
+
+/*Style Three Side By Side*/
+.threeSideBySide {
+  margin-right: 3%;
+  margin-left: 3%;
+  width: 90%;
+  height: auto;
+  display: inline-flex;
+  padding: 20px;
+  justify-content: center;
+  margin-top: -1px;
+  align-items: center;
+}
+
+/*Style Three Side By Side Elements*/
+.threeSideBySideElement {
+  width: 30%;
+  height: auto;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  object-fit: cover;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*Style Three Side By Side to be Responsive*/
+@media screen and (max-width: 1000px) {
+  .threeSideBySide {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: -5%;
+  }
+
+  .threeSideBySideElement {
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+#title {
+  font-size: 60px;
+  text-align: center;
+}
+
+#subtitle {
+  font-size: 25px;
+  text-align: center;
+}
+
+.resourceButton {
+  background-color: #FFDC74;
+  color: #0D121E;
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.resourceButton:hover {
+  cursor: pointer;
+  background-color: #FFE69D;
+}
+
+.buttons {
+  width: 95%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #0D121E;
+  text-align: center;
+}
+
+.buttons a {
+  margin: 20px;
+  color: #0D121E;
+  background-color: #FFDC74;
+}
+
+.buttons p {
+  color: #FFDC74;
+}
+
+.buttons #subtitle {
+  color: #FFFFFF;
+}
+
+#top {
+  margin-bottom: 20px;
+}
+
+/* Bee Garden Game Styles */
+#bee-garden-game {
+  background: #f7fef7;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 20px;
+  max-width: 800px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.garden-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.garden-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#garden-stats {
+  font-weight: 600;
+}
+
+.garden-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.garden-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: 360px;
+}
+
+/* Shop */
+#shop-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+  max-height: 250x;
+  overflow-y: auto;
+}
+
+.seed-packet {
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: contain;
+  margin: 5px;
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.buyable-pot {
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: contain;
+  margin: 5px;
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.seed-packet:active {
+  cursor: grabbing;
+  transform: scale(1.1);
+}
+
+.buyable-pot:active {
+  cursor: grabbing;
+  transform: scale(1.1);
+}
+
+#garden-area.drag-over {
+  background-color: #eaffea;
+  border-color: #66cc66;
+}
+
+#garden-area {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 200px;
+  border: 2px dashed #a2dca2;
+  border-radius: 10px;
+  padding: 10px;
+
+  background-image: url('../Game/sprites/Deck.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#garden-area img.flower-sprite {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+#garden-area img.bee-sprite {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  animation: flyBee 2s ease-in forwards;
+}
+
+@keyframes flyBee {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-120px) rotate(360deg);
+  }
+}
+
+.garden-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#end-day-button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background: #7bd67b;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#end-day-button:hover {
+  background: #5cb85c;
+}
+
+/* Scoreboard Styles */
+#scoreboard {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+#scoreboard h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#scoreboard p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#score-stars {
+  font-size: 24px;
+  color: gold;
+  margin: 15px 0;
+}
+
+#score-best {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  /* Hidden initially */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#modal-start-button {
+  background-color: #ffca28;
+  color: black;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#modal-start-button:hover {
+  background-color: #ffc107;
+}
+
+#restart-button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#restart-button:hover {
+  background: #4cae4c;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .garden-layout {
+    flex-direction: column;
+  }
+}
+
+#shop-items {
+  margin: 40px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
