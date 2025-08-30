@@ -1,6 +1,4 @@
-# *Bee a Hero* - UW*Bee* Hacks: Save the World 2025
-* **Track: Entertainment (High Code)**
-* **Members: Ella Williams, Abby Hoyt, Charlotte Hoyt, Destiny Rebman, Clayton McArthur**
+# *Bee a Hero* - UW*Bee* Hacks: Save the World 2025 <img src="https://github.com/user-attachments/assets/24f0d6ce-ddda-49b7-bea2-1afa006daffd" height=40 width=auto>
 
 ## Inspiration
 We are inspired by the importance of bees in our ecosystems and agriculture. The sharp declining bee populations are a major threat to biodiversity, food security, and environmental health. We created *Bee a Hero* to educate and encourage everyone to take action in an accessible and impactful way.
